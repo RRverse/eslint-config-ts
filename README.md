@@ -1,0 +1,1 @@
+# eslint-config-rreverse-ts
