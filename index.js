@@ -6,9 +6,7 @@ module.exports = {
 		createDefaultProgram: true,
 	},
 	plugins: ['@typescript-eslint', '@stylistic/ts', 'import'],
-	extends: [
-		'plugin:@typescript-eslint/strict'
-	],
+	extends: ['plugin:@typescript-eslint/strict'],
 	root: true,
 	env: {
 		node: true,
@@ -34,7 +32,15 @@ module.exports = {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		// Warning rules
 		'@typescript-eslint/no-magic-numbers': 'warn',
-		'@typescript-eslint/explicit-member-accessibility': 'warn',
+		'@typescript-eslint/explicit-member-accessibility': [
+			'warn',
+			{
+				accessibility: 'explicit',
+				overrides: {
+					constructors: 'no-public',
+				},
+			},
+		],
 		'@typescript-eslint/no-unnecessary-boolean-literal-compare': 'warn',
 		// Error rules
 		'@typescript-eslint/member-ordering': [
@@ -73,46 +79,48 @@ module.exports = {
 			},
 		],
 		'@typescript-eslint/require-await': 'error',
-		'@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
+		'@typescript-eslint/no-floating-promises': [
+			'error',
+			{ignoreIIFE: true},
+		],
 		'padding-line-between-statements': [
 			'error',
-			{ 'blankLine': 'always', 'prev': '*', 'next': 'return' },
-			{ 'blankLine': 'always', 'prev': '*', 'next': 'continue' }
+			{blankLine: 'always', prev: '*', next: 'return'},
+			{blankLine: 'always', prev: '*', next: 'continue'},
 		],
 		'no-eq-null': 'error',
-		'eqeqeq': ['error', 'smart'],
+		eqeqeq: ['error', 'smart'],
 		'padded-blocks': ['error', 'always'],
-
-		'curly': 'error',
-		'quotes': ['error', 'single'],
+		curly: 'error',
+		quotes: ['error', 'single'],
 		'comma-dangle': ['error', 'always-multiline'],
 		'import/no-restricted-paths': [
 			'error',
 			{
-				'zones': [
+				zones: [
 					{
-						'target': './src',
-						'from': './src'
-					}
-				]
-			}
+						target: './src',
+						from: './src',
+					},
+				],
+			},
 		],
 		'no-restricted-imports': [
 			'error',
 			{
-				'patterns': ['../*']
-			}
+				patterns: ['../*'],
+			},
 		],
 		// Formatting rules
-		'@stylistic/ts/quotes': ['error', 'single', { 'avoidEscape': true }],
+		'@stylistic/ts/quotes': ['error', 'single', {avoidEscape: true}],
 		'@stylistic/ts/indent': ['error', 'tab'],
-		'@stylistic/ts/semi': ['error', 'always']
+		'@stylistic/ts/semi': ['error', 'always'],
 	},
-	'settings': {
+	settings: {
 		'import/resolver': {
-			'node': {
-				'moduleDirectory': ['node_modules', 'src']
-			}
-		}
+			node: {
+				moduleDirectory: ['node_modules', 'src'],
+			},
+		},
 	},
 };
