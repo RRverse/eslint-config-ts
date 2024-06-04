@@ -1,0 +1,13 @@
+{
+	"name": "eslint-config-rrverse-ts",
+	"version": "1.0.0",
+	"description": "This package provides a shared ESLint configuration for typescript projects at RRverse. This configuration is based on best practices and is designed to ensure code consistency and quality across all company projects.",
+	"main": "index.js",
+	"peerDependencies": {
+		"eslint": "^8.57.0",
+		"@typescript-eslint/eslint-plugin": "^5.62.0",
+		"@typescript-eslint/parser": "^5.62.0",
+		"eslint-plugin-import": "^2.29.1",
+		"@stylistic/eslint-plugin-ts": "^2.1.0"
+	}
+}
