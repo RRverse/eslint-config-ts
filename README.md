@@ -1,1 +1,1 @@
-# eslint-config-rreverse-ts
+# eslint-config-rrverse-ts

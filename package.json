@@ -1,0 +1,15 @@
+{
+	"name": "eslint-config-rrverse-ts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.mjs",
+	"author": "",
+	"license": "ISC",
+	"peerDependencies": {
+		"@antfu/eslint-config": "^2.23.0",
+		"eslint": "^9.7.0"
+	},
+	"dependencies": {
+		"defu": "^6.1.4"
+	}
+}
