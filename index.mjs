@@ -88,7 +88,7 @@ const userConfigs = [
 		},
 	},
 	{
-		files: ["**/*.entity.ts"],
+		files: ['**/*.entity.ts', '**/*.dto.ts'],
 		rules: {
 			"ts/member-ordering": "off",
 			"ts/explicit-member-accessibility": "off",
