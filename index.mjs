@@ -9,8 +9,9 @@ const antfuDefaultConfig = {
 				"warn",
 				{
 					ignoreArrayIndexes: true,
-					ignore: [-1, 0, 1],
+					ignore: [-1, 0, 1, 2, 24, 60, 10, 100, 1000, 10000, 100000, 1000000, 10000000],
 					enforceConst: true,
+					ignoreEnums: true,
 				},
 			],
 			"ts/no-for-in-array": "off",
